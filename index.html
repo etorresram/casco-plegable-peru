@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Analisis de costo desembarcado, escenarios de importacion y plan de arranque para vender cascos plegables tipo IZANO 2 en Peru.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Casco Plegable Peru">
+<meta property="og:description" content="Costo desembarcado, escenarios de importacion y plan de arranque con US$ 5,000.">
+<meta property="og:type" content="article">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Casco Plegable Perú</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root{
+  --bg:#F5F6F8; --panel:#FFFFFF; --panel-2:#EEF0F3;
+  --ink:#14181D; --ink-2:#525C67; --ink-3:#7A848F;
+  --rule:#D9DDE2; --rule-soft:#E7EAEE;
+  --accent:#C2521F; --steel:#1E6A9E;
+  --good:#2F7248; --warn:#95681A; --crit:#A2332B;
+  --accent-wash:#F6E9E1; --steel-wash:#E4EDF4;
+  --display:'Archivo','Helvetica Neue',Arial,sans-serif;
+  --body:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono','SF Mono',Menlo,Consolas,monospace;
+  --measure:68ch; --wide:1080px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#131619; --panel:#1A1E22; --panel-2:#22272C;
+    --ink:#E8EBEE; --ink-2:#A2ACB6; --ink-3:#7E8892;
+    --rule:#2D333A; --rule-soft:#242A30;
+    --accent:#DE6B2E; --steel:#3D94CC;
+    --good:#4FA97A; --warn:#D0A03F; --crit:#E0665C;
+    --accent-wash:#2A1D15; --steel-wash:#152530;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#131619; --panel:#1A1E22; --panel-2:#22272C;
+  --ink:#E8EBEE; --ink-2:#A2ACB6; --ink-3:#7E8892;
+  --rule:#2D333A; --rule-soft:#242A30;
+  --accent:#DE6B2E; --steel:#3D94CC;
+  --good:#4FA97A; --warn:#D0A03F; --crit:#E0665C;
+  --accent-wash:#2A1D15; --steel-wash:#152530;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);
+  font-size:17px;line-height:1.62;margin:0;
+  -webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+.wrap{max-width:var(--wide);margin:0 auto;padding:0 24px 96px}
+.col{max-width:var(--measure)}
+
+/* ---------- masthead ---------- */
+header.mast{padding:56px 0 0}
+.kicker{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--accent);font-weight:600}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,5.4vw,54px);
+  line-height:1.04;letter-spacing:-.022em;margin:14px 0 0;text-wrap:balance;max-width:16ch}
+.standfirst{font-size:20px;line-height:1.5;color:var(--ink-2);margin:20px 0 0;max-width:56ch}
+.standfirst b{color:var(--ink);font-weight:600}
+
+.facts{display:flex;flex-wrap:wrap;gap:0;margin:36px 0 0;
+  border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.fact{flex:1 1 168px;padding:14px 18px 15px;border-right:1px solid var(--rule-soft)}
+.fact:last-child{border-right:0}
+.fact dt{font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 4px}
+.fact dd{margin:0;font-family:var(--display);font-weight:600;font-size:19px;
+  letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.fact dd small{font-family:var(--mono);font-weight:400;font-size:11.5px;
+  color:var(--ink-3);display:block;letter-spacing:0;margin-top:2px}
+
+/* ---------- verdict ---------- */
+.verdict{margin:40px 0 0;padding:26px 28px 28px;background:var(--panel);
+  border:1px solid var(--rule);border-left:4px solid var(--accent)}
+.verdict h2{font-family:var(--display);font-size:15px;font-weight:600;margin:0 0 12px;
+  letter-spacing:.02em;text-transform:none;color:var(--accent)}
+.verdict p{margin:0 0 12px;max-width:64ch}
+.verdict p:last-child{margin-bottom:0}
+
+/* ---------- sections ---------- */
+section{margin-top:64px}
+.eyebrow{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+h2.sec{font-family:var(--display);font-weight:600;font-size:clamp(24px,3.2vw,32px);
+  letter-spacing:-.018em;line-height:1.14;margin:0 0 6px;text-wrap:balance;max-width:24ch}
+h2.sec+p.dek{color:var(--ink-2);margin:0 0 26px;max-width:60ch;font-size:17.5px}
+h3{font-family:var(--display);font-weight:600;font-size:18px;letter-spacing:-.008em;
+  margin:34px 0 8px}
+p{margin:0 0 16px}
+.col p, .col ul, .col ol{max-width:var(--measure)}
+a{color:var(--steel);text-underline-offset:2px;text-decoration-thickness:1px}
+strong{font-weight:600}
+em.term{font-style:normal;font-family:var(--mono);font-size:.88em;
+  background:var(--panel-2);padding:1px 5px;border-radius:2px}
+
+ul,ol{padding-left:1.15em;margin:0 0 16px}
+li{margin-bottom:8px}
+li::marker{color:var(--ink-3)}
+
+/* ---------- spec strip ---------- */
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:1px;background:var(--rule-soft);border:1px solid var(--rule-soft);margin:0 0 28px}
+.spec{background:var(--panel);padding:14px 16px 16px}
+.spec .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:5px}
+.spec .v{font-family:var(--display);font-weight:600;font-size:17px;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.spec .n{font-size:13.5px;color:var(--ink-2);line-height:1.4;display:block;margin-top:3px}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:0 0 14px;border:1px solid var(--rule);background:var(--panel)}
+table{border-collapse:collapse;width:100%;min-width:660px;font-size:15px}
+caption{text-align:left;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);padding:0 0 8px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--rule-soft);
+  vertical-align:top}
+thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);font-weight:500;
+  border-bottom:1px solid var(--rule);white-space:nowrap}
+tbody tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;
+  white-space:nowrap;font-size:14px}
+td.route{font-family:var(--display);font-weight:600;font-size:15px;line-height:1.3}
+td.route span{display:block;font-family:var(--body);font-weight:400;font-size:13.5px;
+  color:var(--ink-2);margin-top:3px;line-height:1.4}
+tr.hi td{background:var(--accent-wash)}
+.tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;padding:2px 7px;
+  border-radius:2px;white-space:nowrap;font-weight:500}
+.tag.yes{background:color-mix(in srgb,var(--good) 14%,transparent);color:var(--good)}
+.tag.no{background:color-mix(in srgb,var(--crit) 13%,transparent);color:var(--crit)}
+.tag.mid{background:color-mix(in srgb,var(--warn) 16%,transparent);color:var(--warn)}
+.note{font-size:13.5px;color:var(--ink-3);max-width:70ch;margin:0 0 8px;line-height:1.5}
+
+/* ---------- price ladder chart ---------- */
+figure.chart{margin:0 0 12px;padding:24px 24px 20px;background:var(--panel);
+  border:1px solid var(--rule)}
+figure.chart figcaption{font-family:var(--display);font-weight:600;font-size:17px;
+  margin:0 0 4px;letter-spacing:-.01em}
+figure.chart .sub{font-size:14.5px;color:var(--ink-2);margin:0 0 18px;max-width:58ch}
+.legend{display:flex;gap:20px;margin:0 0 18px;flex-wrap:wrap}
+.legend span{display:flex;align-items:center;gap:7px;font-family:var(--mono);
+  font-size:11.5px;color:var(--ink-2);letter-spacing:.04em}
+.swatch{width:11px;height:11px;border-radius:2px;flex:none}
+.sw-mkt{background:var(--steel)}
+.sw-cost{background:var(--accent)}
+.ladder{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:5px 14px;
+  align-items:center}
+.ladder .lbl{font-size:13.5px;line-height:1.28;text-align:right;color:var(--ink-2)}
+.ladder .lbl b{display:block;color:var(--ink);font-weight:600;font-size:14px}
+.track{position:relative;height:22px;display:flex;align-items:center;gap:8px}
+.bar{height:16px;border-radius:0 3px 3px 0;flex:none;
+  box-shadow:0 0 0 2px var(--panel)}
+.bar.mkt{background:var(--steel)}
+.bar.cost{background:var(--accent)}
+.val{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;
+  color:var(--ink-2);white-space:nowrap}
+.axis{display:grid;grid-template-columns:minmax(120px,190px) 1fr;gap:14px;
+  margin-top:12px;padding-top:9px;border-top:1px solid var(--rule-soft)}
+.ticks-outer{width:calc(84% + 4px)}
+.axis .ticks{display:flex;justify-content:space-between;font-family:var(--mono);
+  font-size:11px;color:var(--ink-3)}
+
+/* ---------- callouts ---------- */
+.callout{background:var(--panel);border:1px solid var(--rule);padding:22px 24px;
+  margin:0 0 20px}
+.callout.plan{border-top:3px solid var(--accent)}
+.callout h3{margin-top:0}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding-left:38px;margin-bottom:18px}
+.steps li:last-child{margin-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:2px;
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--accent);
+  border:1px solid var(--accent);width:22px;height:22px;display:grid;place-items:center;
+  border-radius:50%}
+.steps li b{font-family:var(--display);font-weight:600;font-size:15.5px;display:block;
+  margin-bottom:2px}
+.steps li .cost{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);
+  float:right;margin-left:12px}
+
+.risks{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;
+  margin:0 0 16px}
+.risk{border-left:2px solid var(--rule);padding-left:16px}
+.risk .lvl{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  text-transform:uppercase;display:block;margin-bottom:4px}
+.risk.hi{border-left-color:var(--crit)} .risk.hi .lvl{color:var(--crit)}
+.risk.md{border-left-color:var(--warn)} .risk.md .lvl{color:var(--warn)}
+.risk.lo{border-left-color:var(--good)} .risk.lo .lvl{color:var(--good)}
+.risk p{font-size:14.5px;margin:0;color:var(--ink-2)}
+.risk h4{font-family:var(--display);font-size:15px;font-weight:600;margin:0 0 5px}
+
+footer{margin-top:72px;padding-top:26px;border-top:1px solid var(--rule);
+  font-size:13.5px;color:var(--ink-3)}
+footer h3{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--ink-3);margin:0 0 10px}
+footer ul{padding-left:1.1em;columns:2;column-gap:36px}
+@media(max-width:640px){footer ul{columns:1}}
+footer li{margin-bottom:5px;break-inside:avoid}
+footer a{color:var(--ink-2)}
+
+@media(max-width:620px){
+  body{font-size:16px}
+  .ladder{grid-template-columns:1fr;gap:2px}
+  .ladder .lbl{text-align:left;margin-top:10px}
+  .axis{grid-template-columns:1fr}
+  .axis .ticks{margin-left:0}
+}
+</style>
+
+<div class="wrap">
+
+<header class="mast">
+  <p class="kicker">Evaluación de proyecto · Lima, setiembre 2026</p>
+  <h1>Cascos plegables: qué cuesta y qué no cierra</h1>
+  <p class="standfirst">El IZANO 2 de DIC Plastics es un producto real y bien resuelto. <b>El problema no es el casco: es que a precio de tienda japonesa no existe margen</b>, y con US$&nbsp;5,000 el movimiento correcto no es importar inventario sino comprar información.</p>
+
+  <dl class="facts">
+    <div class="fact"><dt>Precio en Japón</dt><dd>¥ 6,598<small>sin impuesto ≈ S/ 143</small></dd></div>
+    <div class="fact"><dt>Costo en Lima (ruta A)</dt><dd>S/ 247<small>comprando a precio tienda</small></dd></div>
+    <div class="fact"><dt>Costo en Lima (ruta D)</dt><dd>S/ 73<small>plegable chino, 170 u</small></dd></div>
+    <div class="fact"><dt>Casco rígido en Sodimac</dt><dd>S/ 7 – 95<small>tu competencia real</small></dd></div>
+    <div class="fact"><dt>Tipo de cambio</dt><dd>3.365<small>USD/PEN · 04-09-2026</small></dd></div>
+  </dl>
+</header>
+
+<div class="verdict">
+  <h2>Lectura en una página</h2>
+  <p>Comprar IZANO 2 en tiendas japonesas y revenderlo en Perú <strong>no funciona</strong>: llega a S/&nbsp;247 por unidad y tendrías que venderlo sobre S/&nbsp;550 para tener un negocio, contra cascos de S/&nbsp;7 a S/&nbsp;95 en Sodimac. No hay arbitraje disponible en el precio minorista.</p>
+  <p>Solo dos rutas dan números que cierran: <strong>convertirte en distribuidor de DIC</strong> (necesitas su lista mayorista, que no es pública) o <strong>encargar un plegable con tu marca en China</strong>, donde el costo desembarcado cae a S/&nbsp;73 con un pedido de 170 unidades — que sí entra en tu presupuesto.</p>
+  <p>Fabricarlo en Perú queda fuera de discusión con US$&nbsp;5,000: solo el juego de moldes de inyección para un casco articulado va de US$&nbsp;25,000 a US$&nbsp;80,000 antes de la primera pieza.</p>
+</div>
+
+<section>
+  <p class="eyebrow">El producto</p>
+  <h2 class="sec">Qué es exactamente lo que quieres vender</h2>
+  <p class="dek">Un casco de obra de ABS que colapsa a 63&nbsp;mm de espesor — el grosor de un libro de bolsillo — y se arma de un tirón.</p>
+
+  <div class="specs">
+    <div class="spec"><span class="k">Plegado</span><span class="v">63 mm</span><span class="n">222 × 297 mm de huella</span></div>
+    <div class="spec"><span class="k">Armado</span><span class="v">139 mm</span><span class="n">2.2× más volumen</span></div>
+    <div class="spec"><span class="k">Peso</span><span class="v">450 g</span><span class="n">casco + bolsa</span></div>
+    <div class="spec"><span class="k">Casquete</span><span class="v">ABS</span><span class="n">con liner de absorción</span></div>
+    <div class="spec"><span class="k">Ajuste</span><span class="v">47 – 62 cm</span><span class="n">niños y adultos, un solo SKU</span></div>
+    <div class="spec"><span class="k">Colores</span><span class="v">9</span><span class="n">mismo precio de lista</span></div>
+  </div>
+
+  <div class="col">
+    <p>Dos cosas de la ficha técnica cambian tu plan de negocio antes de mirar un solo número de costo.</p>
+
+    <h3>El rango 47–62 cm resuelve tu duda de “adultos y niños”</h3>
+    <p>No necesitas dos productos ni dos inventarios. El mismo casco cubre desde una cabeza infantil de unos cuatro años hasta un adulto grande. Eso simplifica compra, almacén y catálogo — y es una ventaja comercial concreta frente a vender dos líneas separadas.</p>
+
+    <h3>La certificación japonesa no te sirve para vender EPP industrial</h3>
+    <p>El IZANO 2 está aprobado bajo el estándar del <em class="term">厚生労働省</em> japonés para objetos que caen y protección en caídas. Eso es una certificación seria, pero <strong>no es ANSI Z89.1 ni EN 397</strong>, que es lo que exige la Norma Técnica G.050 y lo que va a pedir cualquier prevencionista en una obra o una mina peruana. El fabricante además advierte que no puede usarse en trabajos eléctricos: no tiene clase dieléctrica.</p>
+    <p>Traducción práctica: la puerta de construcción y minería está cerrada para este modelo tal como se vende. Tus tres segmentos elegidos — familias, colegios y municipios, oficinas — son justamente los que <em>no</em> exigen ANSI, así que la elección de mercado que hiciste es la correcta. Pero conviene saberlo antes y no después de comprar inventario.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Origen</p>
+  <h2 class="sec">Cuánto cuesta allá, y por qué eso ya es un problema</h2>
+
+  <div class="col">
+    <p>En MonotaRO, el mayorista industrial japonés, el IZANO 2 está a <strong>¥&nbsp;7,258 con impuesto al consumo y ¥&nbsp;6,598 sin él</strong>. Como exportación sale sin el impuesto japonés, tu referencia es ¥&nbsp;6,598 ≈ <strong>US$&nbsp;42.4 ≈ S/&nbsp;143</strong> por unidad puesto en tienda en Japón. Una tienda de exportación como Wafuu lo lista en US$&nbsp;45.</p>
+    <p>Ese es el precio al que compra un consumidor japonés. Un importador no puede construir un negocio encima de un precio minorista: para cuando le sumes flete, arancel, IGV y tu propio margen, el número final ya no lo paga nadie en Lima. <strong>El precio que necesitas es la lista mayorista de DIC Plastics, y esa no está publicada.</strong> Conseguirla es, literalmente, el primer entregable del proyecto.</p>
+    <p>En el modelo de abajo asumo que un distribuidor obtiene el 55&nbsp;% de la lista (≈ US$&nbsp;23 por unidad). Es un supuesto de referencia razonable para EPP importado, no un dato: puede ser 45&nbsp;% o 70&nbsp;% según el compromiso de volumen. Todo el escenario japonés depende de esa cifra.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Aduana</p>
+  <h2 class="sec">La aritmética de traerlo</h2>
+  <p class="dek">Tres regímenes, tres estructuras de costo distintas. Cuál te conviene depende únicamente del tamaño del pedido.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Régimen de importación según tamaño del embarque</caption>
+      <thead><tr>
+        <th>Vía</th><th>Límite</th><th class="num">Arancel</th><th class="num">IGV</th><th>Costo logístico</th><th>Tránsito</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="route">Courier hasta US$ 200<span>muestras</span></td><td>por envío</td><td class="num">exento</td><td class="num">exento</td><td class="num">US$ 20.11 / kg</td><td>3–7 días</td></tr>
+        <tr><td class="route">Courier US$ 200 – 2,000<span>piloto pequeño</span></td><td>US$ 2,000 FOB</td><td class="num">4 %</td><td class="num">18 %</td><td class="num">US$ 20.11 / kg</td><td>3–7 días</td></tr>
+        <tr class="hi"><td class="route">Carga compartida marítima<span>mínimo 100 kg y US$ 2,000</span></td><td>sin tope</td><td class="num">11 % *</td><td class="num">18 %</td><td class="num">US$ 390 el primer m³<br>+ US$ 120 c/m³</td><td>28–35 días</td></tr>
+        <tr><td class="route">LCL / FCL con agente<span>volumen serio</span></td><td>sin tope</td><td class="num">11 % *</td><td class="num">18 %</td><td class="num">US$ 120 / m³ + gastos<br>20′ = US$ 5,200–6,400</td><td>28–35 días</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">* Subpartida <strong>6506.10.10.00</strong> (cascos de seguridad de plástico), 11&nbsp;% ad valorem general. <strong>Verificar en SUNAT si el origen Japón paga 0&nbsp;%</strong> bajo el Acuerdo de Asociación Económica Perú–Japón, vigente desde 2012: el cronograma de desgravación probablemente ya culminó para esta línea, y la diferencia es de unos US$&nbsp;2.6 por unidad. Requiere certificado de origen del proveedor japonés. El IGV se recupera como crédito fiscal si operas con RUC y facturas; si compras como persona natural, es costo puro.</p>
+
+  <div class="col">
+    <p>El detalle que decide el escenario pequeño: el casco pesa 450&nbsp;g pero <strong>ocupa 0.005&nbsp;m³ empacado</strong>. En aéreo se cobra por peso volumétrico, que sube el kilo facturable a ~0.85&nbsp;kg por unidad. A US$&nbsp;20 el kilo, el flete aéreo de un casco cuesta más de US$&nbsp;17 — casi el 40&nbsp;% de lo que vale el producto en Japón. Por eso todo pedido serio va por mar.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Escenarios</p>
+  <h2 class="sec">Cinco rutas, cinco cifras</h2>
+  <p class="dek">Costo unitario puesto en Lima, con IGV ya descontado como crédito fiscal salvo donde se indique.</p>
+
+  <div class="tablewrap">
+    <table>
+      <caption>Modelo de costo desembarcado · tipo de cambio 3.365 PEN/USD</caption>
+      <thead><tr>
+        <th>Ruta</th><th class="num">Unid.</th><th class="num">Caja necesaria</th><th class="num">Costo / unidad</th><th class="num">PVP a 2.3×</th><th>¿Entra en US$ 5,000?</th>
+      </tr></thead>
+      <tbody>
+        <tr>
+          <td class="route">A · Comprar en tienda japonesa<span>courier aéreo, persona natural</span></td>
+          <td class="num">40</td><td class="num">US$ 2,940<br>S/ 9,891</td><td class="num">S/ 247</td><td class="num">S/ 568</td>
+          <td><span class="tag mid">Sí, pero no vende</span></td>
+        </tr>
+        <tr>
+          <td class="route">B · DIC como distribuidor, aéreo<span>precio mayorista supuesto</span></td>
+          <td class="num">80</td><td class="num">US$ 3,989<br>S/ 13,419</td><td class="num">S/ 142</td><td class="num">S/ 327</td>
+          <td><span class="tag mid">Sí, si DIC acepta</span></td>
+        </tr>
+        <tr>
+          <td class="route">C · DIC distribuidor, marítimo<span>arancel 0 % vía EPA</span></td>
+          <td class="num">300</td><td class="num">US$ 9,562<br>S/ 32,172</td><td class="num">S/ 92</td><td class="num">S/ 212</td>
+          <td><span class="tag no">No</span></td>
+        </tr>
+        <tr class="hi">
+          <td class="route">D · Plegable chino con tu marca<span>carga compartida, FOB US$ 16</span></td>
+          <td class="num">170</td><td class="num">US$ 4,299<br>S/ 14,464</td><td class="num">S/ 73</td><td class="num">S/ 168</td>
+          <td><span class="tag yes">Sí</span></td>
+        </tr>
+        <tr>
+          <td class="route">E · Plegable chino a escala<span>FOB US$ 14, 2.5 m³</span></td>
+          <td class="num">500</td><td class="num">US$ 10,575<br>S/ 35,581</td><td class="num">S/ 61</td><td class="num">S/ 140</td>
+          <td><span class="tag no">No</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="note">“Caja necesaria” es el desembolso total incluyendo IGV, que luego recuperas. Excluye constitución de empresa, registro de marca, fotografía, tienda online y publicidad — súmale S/&nbsp;3,000 a S/&nbsp;5,000 de costos fijos de arranque. La ruta A calcula el IGV como costo porque asume compra sin RUC.</p>
+</section>
+
+<section>
+  <p class="eyebrow">Mercado</p>
+  <h2 class="sec">El muro de precio</h2>
+
+  <figure class="chart">
+    <figcaption>Tu costo desembarcado contra lo que ya se vende en Lima</figcaption>
+    <p class="sub">Precios de góndola de Sodimac frente al costo unitario de cada ruta. La ruta A llega a Lima costando 2.6 veces el casco más caro del mercado.</p>
+
+    <div class="legend">
+      <span><i class="swatch sw-mkt"></i> Precio de venta hoy en Sodimac</span>
+      <span><i class="swatch sw-cost"></i> Tu costo desembarcado</span>
+    </div>
+
+    <div class="ladder">
+      <div class="lbl"><b>BELLSAFE económico</b>casco rígido</div>
+      <div class="track"><div class="bar mkt" style="width:2.4%"></div><span class="val">S/ 7</span></div>
+
+      <div class="lbl"><b>TRUPER matraca</b>casco rígido</div>
+      <div class="track"><div class="bar mkt" style="width:9.1%"></div><span class="val">S/ 27</span></div>
+
+      <div class="lbl"><b>3M ventilado</b>casco rígido</div>
+      <div class="track"><div class="bar mkt" style="width:16.8%"></div><span class="val">S/ 50</span></div>
+
+      <div class="lbl"><b>3M H-702</b>casco rígido</div>
+      <div class="track"><div class="bar mkt" style="width:23.5%"></div><span class="val">S/ 70</span></div>
+
+      <div class="lbl"><b>Ruta D</b>plegable chino, 170 u</div>
+      <div class="track"><div class="bar cost" style="width:24.5%"></div><span class="val">S/ 73</span></div>
+
+      <div class="lbl"><b>Ruta C</b>IZANO 2 distribuidor, 300 u</div>
+      <div class="track"><div class="bar cost" style="width:30.9%"></div><span class="val">S/ 92</span></div>
+
+      <div class="lbl"><b>STEELPRO Mountain</b>casco rígido premium</div>
+      <div class="track"><div class="bar mkt" style="width:31.9%"></div><span class="val">S/ 95</span></div>
+
+      <div class="lbl"><b>Ruta B</b>IZANO 2 distribuidor, 80 u</div>
+      <div class="track"><div class="bar cost" style="width:47.7%"></div><span class="val">S/ 142</span></div>
+
+      <div class="lbl"><b>Ruta A</b>IZANO 2 a precio tienda</div>
+      <div class="track"><div class="bar cost" style="width:83.0%"></div><span class="val">S/ 247</span></div>
+    </div>
+
+    <div class="axis"><div></div><div class="ticks-outer"><div class="ticks"><span>S/ 0</span><span>S/ 50</span><span>S/ 100</span><span>S/ 150</span><span>S/ 200</span><span>S/ 250</span></div></div></div>
+  </figure>
+
+  <div class="col">
+    <p>Un comprador que solo quiere protección para la cabeza tiene la necesidad cubierta desde S/&nbsp;7. Tú no puedes competir ahí y no deberías intentarlo. <strong>Lo que vendes no es protección: es metros cúbicos y disciplina de preparación.</strong></p>
+    <p>Ese argumento tiene un número detrás. Un colegio o una oficina de 200 personas que quiere cascos para todos necesita <strong>1.2&nbsp;m³ de almacén con cascos rígidos y 0.55&nbsp;m³ con plegables</strong>, y los plegables caben en un cajón de escritorio por persona en lugar de un depósito común. Un casco que vive en el cajón del usuario está disponible en el sismo; uno que vive en un almacén cerrado en el tercer piso, no. Ese es el pitch, y explica por qué tus tres segmentos elegidos son los correctos y por qué en ellos S/&nbsp;170–250 es un precio defendible que en una ferretería no lo sería.</p>
+    <p>Advertencia honesta sobre el segmento estatal: colegios, municipios y Defensa Civil compran por licitación o por catálogo Perú Compras, con ciclos de seis a dieciocho meses, requisitos de ficha técnica y capital de trabajo inmovilizado. Es el mejor cliente por ticket y el peor por caja. No lo abras primero.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Fabricación</p>
+  <h2 class="sec">¿Producirlo en Perú?</h2>
+
+  <div class="col">
+    <p>La respuesta corta es no, y no por una razón de patentes sino de aritmética de moldes.</p>
+    <p>Un casco plegable no es una pieza: es un casquete segmentado, un mecanismo de bisagras, un seguro de bloqueo, el arnés, la ruleta de ajuste y la barbiquejo. En China un molde de inyección va de <strong>US$&nbsp;2,000 a US$&nbsp;20,000</strong> según tamaño y complejidad, y cada corredera o socavado suma. Un producto así necesita entre cinco y ocho moldes: <strong>US$&nbsp;25,000 a US$&nbsp;80,000 solo en herramental</strong>, antes de máquina, material, ensamble y ensayos de impacto. Y esos moldes solo se amortizan con decenas de miles de unidades, un volumen que el mercado peruano de cascos plegables no tiene hoy — porque hoy no existe.</p>
+
+    <h3>Sobre las patentes de DIC</h3>
+    <p>Una patente japonesa no protege nada en Perú salvo que DIC la haya presentado también ante INDECOPI. Es probable que no lo haya hecho, lo que te daría libertad de operación local. Pero antes de gastar un sol en esto conviene hacer la búsqueda en la base de INDECOPI, y tener presente dos cosas: la libertad sería <em>solo</em> para el mercado peruano, y copiar el mecanismo y la imagen de producto de un fabricante japonés es una posición comercial frágil si tu plan es construir una marca.</p>
+    <p>La versión sensata de “producir” en tu etapa no es fabricar: es <strong>encargar a un fabricante chino existente un plegable con tu marca, tu color y tu empaque</strong>, exigiendo certificación EN&nbsp;397 o ANSI Z89.1 en el pedido. Eso te da lo que la ruta japonesa no puede darte — una certificación que sí abre construcción y minería más adelante — a un tercio del costo.</p>
+  </div>
+
+  <div class="risks">
+    <div class="risk hi"><span class="lvl">Riesgo alto</span><h4>Calidad del proveedor chino</h4><p>Los listados con precios de US$&nbsp;0.10 la unidad son señuelos. Un plegable serio está entre US$&nbsp;12 y US$&nbsp;22 FOB. Sin muestra física ensayada, no hay pedido.</p></div>
+    <div class="risk hi"><span class="lvl">Riesgo alto</span><h4>Demanda no probada</h4><p>Nadie vende cascos plegables en Perú hoy. Puede ser una oportunidad o puede ser que el mercado ya respondió que no.</p></div>
+    <div class="risk md"><span class="lvl">Riesgo medio</span><h4>Precio mayorista de DIC</h4><p>Todo el escenario japonés vive de un número que aún no tienes. Puede llegar y matar la ruta.</p></div>
+    <div class="risk md"><span class="lvl">Riesgo medio</span><h4>Responsabilidad de producto</h4><p>Vendes un elemento de protección. Etiquetado en español, ficha técnica, norma citada y trazabilidad de lote no son opcionales.</p></div>
+    <div class="risk lo"><span class="lvl">Riesgo bajo</span><h4>Aduana</h4><p>Partida clara, sin registro sanitario ni permiso sectorial. Es el paso más predecible del proyecto.</p></div>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Recomendación</p>
+  <h2 class="sec">Qué haría con tus US$ 5,000</h2>
+  <p class="dek">No comprar inventario todavía. Con este presupuesto, la variable escasa no es el capital: es saber si alguien paga S/ 190 por esto.</p>
+
+  <div class="callout plan">
+    <ol class="steps">
+      <li><span class="cost">US$ 0 · semana 1</span><b>Pedir la lista mayorista a DIC Plastics</b>Escribe al formulario de contacto de DIC Plastics preguntando por condiciones de distribución en Perú: precio FOB por escalones de 100 / 300 / 1,000 unidades, MOQ, si ya tienen distribuidor en Sudamérica, y si emiten certificado de origen para el EPA Perú–Japón. Es gratis y define si la ruta B o C existe.</li>
+      <li><span class="cost">US$ 400 · semanas 1–3</span><b>Traer 4 muestras: 2 japonesas, 2 chinas</b>Bajo US$ 200 FOB por envío entran sin arancel ni IGV. Necesitas tener las dos en la mano: la japonesa como referencia de calidad y las chinas para ver si el mecanismo aguanta. Pide a los proveedores chinos su certificado EN 397 o ANSI Z89.1 con número de laboratorio, no un PDF genérico.</li>
+      <li><span class="cost">US$ 600 · semanas 3–6</span><b>Vender antes de comprar</b>Con las muestras físicas, toca la puerta de diez oficinas corporativas, cinco colegios privados y tres administradoras de edificios. Ofrece un precio de lista de S/ 190 y una orden de compra con 50 % de adelanto para entrega en 45 días. Este paso cuesta fotos, una landing simple y tu tiempo. <strong>Si consigues tres cartas de intención por 40 unidades cada una, tienes negocio. Si no consigues ninguna, te ahorraste US$ 4,000.</strong></li>
+      <li><span class="cost">US$ 3,900 · semanas 6–14</span><b>Recién ahí, el primer pedido</b>170 unidades por carga compartida contra las órdenes ya firmadas. Con 120 unidades comprometidas de antemano, el inventario de riesgo baja a 50 unidades y el punto de equilibrio se cruza dentro del primer embarque.</li>
+      <li><span class="cost">US$ 100 · en paralelo</span><b>Registrar la marca en INDECOPI</b>Una clase, tarifa reducida MYPE. Si el producto funciona, el activo que vas a defender es la marca y el canal institucional, no el casco — ese lo puede importar cualquiera.</li>
+    </ol>
+  </div>
+
+  <div class="col">
+    <p>El punto de equilibrio del escenario D, con costo unitario de S/&nbsp;73, precio de S/&nbsp;190 y S/&nbsp;4,000 de costos fijos de arranque, está en <strong>35 unidades vendidas</strong>. Recuperar el total desembolsado de S/&nbsp;14,464 requiere <strong>124 unidades</strong> — el 73&nbsp;% del embarque. Es un negocio que se sostiene, pero solo si vendes casi todo lo que traes: no es un producto para dejar en consignación esperando rotación.</p>
+  </div>
+</section>
+
+<section>
+  <p class="eyebrow">Trazabilidad</p>
+  <h2 class="sec">Supuestos y qué falta verificar</h2>
+
+  <div class="col">
+    <p>Estos números tienen distinta calidad y conviene no tratarlos igual. Lo verificado: el precio japonés, las especificaciones del producto, las tarifas de flete y carga compartida, los precios de góndola en Lima, los tipos de cambio al 4 de setiembre de 2026 y las reglas del régimen courier.</p>
+    <p>Lo que es supuesto y hay que confirmar antes de comprometer dinero:</p>
+    <ul>
+      <li><strong>Precio mayorista de DIC (US$&nbsp;23, asumido al 55&nbsp;% de lista).</strong> Es el supuesto más frágil del modelo. Todo el escenario japonés se mueve con él.</li>
+      <li><strong>Arancel de la subpartida 6506.10.10.00 para origen Japón.</strong> Usé 0&nbsp;% en el escenario C asumiendo desgravación completa del EPA y 11&nbsp;% en los chinos. Confírmalo en la consulta de tratamiento arancelario de SUNAT antes de cotizar.</li>
+      <li><strong>FOB del plegable chino (US$&nbsp;14–16).</strong> Es un rango de mercado, no una cotización. Necesitas tres cotizaciones reales con certificación adjunta.</li>
+      <li><strong>Gastos locales en Callao (US$&nbsp;190–700 según ruta).</strong> Varían por agente y por almacén; pide cotización cerrada puerta a puerta.</li>
+      <li><strong>Patentes de DIC en Perú.</strong> Búsqueda pendiente en INDECOPI. Solo importa si decides fabricar o copiar el mecanismo.</li>
+      <li><strong>Disposición a pagar en tus tres segmentos.</strong> No hay dato: es exactamente lo que el paso 3 del plan sale a medir.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <h3>Fuentes</h3>
+  <ul>
+    <li><a href="https://www.dic-plas.co.jp/products/helmet/izano2/index.html">DIC Plastics — IZANO 2, sitio oficial</a></li>
+    <li><a href="https://www.monotaro.com/g/05051032/">MonotaRO — precio y ficha del IZANO 2</a></li>
+    <li><a href="https://wafuu.com/en-us/products/dic-plastic-folding-helmet-izano2-green">Wafuu Japan — precio de exportación y dimensiones</a></li>
+    <li><a href="https://aduanaspe.com/blog/importaciones-implementos-seguridad-peru-mayo-2025/">AduanasPE — partidas y aranceles de EPP</a></li>
+    <li><a href="https://asistenteaduanero.sunat.gob.pe/envios-de-entrega-rapida-courier-fob-hasta-2000">SUNAT — régimen courier hasta US$ 2,000</a></li>
+    <li><a href="https://es.sino-shipping.com/envio-desde-china-a-peru/">Sino Shipping — tarifas marítimas y aéreas a Callao, set. 2026</a></li>
+    <li><a href="https://pic-cargoperu.com/transporte-internacional/transporte-carga-consolidada-peru/">PIC Cargo Perú — tarifas de carga compartida</a></li>
+    <li><a href="https://www.sodimac.com.pe/sodimac-pe/lista/CATG34981/Cascos-de-Seguridad">Sodimac Perú — precios de cascos de seguridad</a></li>
+    <li><a href="https://www.plasticmoulds.net/plastic-mold-tool-cost">PlasticMoulds — costos de moldes de inyección en China</a></li>
+    <li><a href="https://www.durasafe.com.sg/shop/durapro-knight-foldable-safety-helmet-v2-en397/">Durasafe — plegable EN 397 comparable, SGD 65</a></li>
+    <li><a href="https://www.acuerdoscomerciales.gob.pe/En_Vigencia/Japon/inicio.html">MINCETUR — Acuerdo de Asociación Económica Perú–Japón</a></li>
+    <li><a href="https://www.onpsctr.gob.pe/DocumentosComunes/G.050%20Seg.%20durante%20la%20Construcci%C3%B3n.pdf">Norma Técnica G.050 — Seguridad durante la construcción</a></li>
+  </ul>
+</footer>
+
+</div>
+
+</body>
+</html>
